@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="الموقع التعريفي لمدرسة العقال البحري الثانوية المشتركة">
+<title>العقال البحري الثانوية المشتركة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="cinematic-loader"><div class="loader-mark">ع</div><div class="loader-line"></div><p>العقال البحري الثانوية المشتركة</p></div>
+
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="الرئيسية">
+    <span class="brand-dot"></span><span>العقال البحري</span>
+  </a>
+  <nav id="mainNav">
+    <a href="#home">الرئيسية</a>
+    <a href="#manager">المديرة</a>
+    <a href="#leadership">القيادات</a>
+    <a href="#teachers">المعلمون</a>
+    <a href="#gallery">المعرض</a>
+    <a href="#activities">الأنشطة</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+  <button id="menuBtn" class="icon-btn" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+</header>
+
+<button id="themeBtn" class="floating-control" title="تغيير المظهر"><i class="fa-solid fa-moon"></i></button>
+<button id="adminOpen" class="floating-control admin-trigger" title="دخول المشرف"><i class="fa-solid fa-shield-halved"></i></button>
+<button id="topBtn" class="floating-control top-trigger" title="أعلى الصفحة"><i class="fa-solid fa-arrow-up"></i></button>
+
+<main>
+<section id="home" class="hero section">
+  <div class="hero-bg"></div><div class="hero-noise"></div><div class="hero-vignette"></div>
+  <div class="hero-content reveal">
+    <span class="eyebrow">الموقع التعريفي الرسمي</span>
+    <h1 id="heroTitle">مدرسة العقال البحري<br><strong>الثانوية المشتركة</strong></h1>
+    <p id="heroText">حيث يجتمع العلم والطموح والإبداع لصناعة مستقبل أفضل.</p>
+    <div class="hero-actions">
+      <a href="#manager" class="cinematic-btn">استكشف المدرسة <i class="fa-solid fa-arrow-left"></i></a>
+      <a href="#teachers" class="ghost-btn">تعرف على معلمينا</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span>مرر للاستكشاف</div>
+  <div class="hero-location"><i class="fa-solid fa-location-dot"></i><span id="heroAddress">العقال البحري - محافظة أسيوط - جمهورية مصر العربية</span></div>
+</section>
+
+<section class="marquee-strip"><div id="marqueeText">علم • طموح • انضباط • إبداع • مستقبل</div></section>
+
+<section id="manager" class="section dark-section">
+  <div class="section-heading reveal"><span>01</span><div><p class="eyebrow">رسالة المدرسة</p><h2>كلمة مديرة المدرسة</h2></div></div>
+  <div class="manager-layout reveal">
+    <div class="portrait-frame"><img id="managerImage" src="https://i.postimg.cc/bNfqSfvK/1.png" alt="مديرة المدرسة"><span class="frame-corner c1"></span><span class="frame-corner c2"></span></div>
+    <div class="manager-copy">
+      <span class="role">مديرة المدرسة</span><h3 id="managerName">الأستاذة / ليلى البدري</h3>
+      <p id="managerText">نرحب بجميع زوار موقع مدرستنا، ونسعى دائمًا إلى توفير بيئة تعليمية متميزة تُنمّي قدرات الطلاب، وترسّخ قيم الأخلاق والتميز والإبداع.</p>
+      <div class="signature">العقال البحري الثانوية المشتركة</div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="section">
+  <div class="section-heading reveal"><span>02</span><div><p class="eyebrow">قيادات التعليم</p><h2>القيادات</h2></div></div>
+  <div id="officialsGrid" class="leadership-grid"></div>
+</section>
+
+<section class="section phrase-section">
+  <div class="phrase-grid" id="phrasesGrid"></div>
+</section>
+
+<section id="teachers" class="section dark-section">
+  <div class="section-heading reveal"><span>03</span><div><p class="eyebrow">أسرة المدرسة</p><h2>معلمونا</h2></div></div>
+  <div class="teachers-tools">
+    <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="teacherSearch" placeholder="ابحث باسم المعلم أو المادة..."></div>
+    <div id="subjectFilters" class="filter-row"></div>
+  </div>
+  <div id="teacherAdminBar" class="teacher-admin-bar" hidden>
+    <button onclick="addItem('teacher')"><i class="fa-solid fa-user-plus"></i> إضافة كارت مدرس جديد</button>
+  </div>
+  <div id="teachersGrid" class="teachers-grid"></div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="section-heading reveal"><span>04</span><div><p class="eyebrow">من داخل المدرسة</p><h2>المعرض</h2></div></div>
+  <div id="galleryGrid" class="gallery-grid"></div>
+</section>
+
+<section id="activities" class="section dark-section">
+  <div class="section-heading reveal"><span>05</span><div><p class="eyebrow">حياة مدرسية</p><h2>الأنشطة المدرسية</h2></div></div>
+  <div id="activitiesGrid" class="activity-grid"></div>
+</section>
+
+<section class="section schedule-section">
+  <div class="section-heading reveal"><span>06</span><div><p class="eyebrow">إيقاع اليوم</p><h2 id="m">جدول اليوم الدراسي</h2></div></div>
+  <div id="scheduleGrid" class="schedule-timeline"></div>
+</section>
+
+<section class="section dark-section split-section">
+  <div class="split-card"><span class="eyebrow">رؤيتنا</span><i class="fa-solid fa-eye"></i><h2 id="visionTitle">رؤيتنا</h2><p id="visionText">إعداد جيل واعٍ قادر على التفكير والإبداع والمنافسة، يمتلك المهارات العلمية والأخلاقية التي تؤهله لبناء مستقبل أفضل.</p></div>
+  <div class="split-card"><span class="eyebrow">رسالتنا</span><i class="fa-solid fa-bullseye"></i><h2 id="missionTitle">رسالتنا</h2><p id="missionText">توفير بيئة تعليمية آمنة ومحفزة تعتمد على الجودة والابتكار، وتنمية شخصية الطالب علميًا وأخلاقيًا واجتماعيًا.</p></div>
+</section>
+
+<section class="section values-section">
+  <div class="section-heading reveal"><span>07</span><div><p class="eyebrow">ما نؤمن به</p><h2 id="m">قيم المدرسة</h2></div></div>
+  <div id="valuesGrid" class="values-grid"></div>
+</section>
+
+<section class="section dark-section faq-section">
+  <div class="section-heading reveal"><span>08</span><div><p class="eyebrow">أسئلة متكررة</p><h2>الأسئلة الشائعة</h2></div></div>
+  <div id="faqList" class="faq-list"></div>
+</section>
+
+<section class="section news-section">
+  <div class="section-heading reveal"><span>09</span><div><p class="eyebrow">آخر المستجدات</p><h2 id="m">أخبار المدرسة</h2></div></div>
+  <div id="newsGrid" class="news-grid"></div>
+</section>
+
+<section id="share" class="section share-section">
+  <div class="section-heading reveal"><span>10</span><div><p class="eyebrow">انشر الموقع</p><h2>شارك الموقع</h2></div></div>
+  <div class="share-grid">
+    <div class="share-card">
+      <div class="share-icon"><i class="fa-solid fa-share-nodes"></i></div><h3 id="m">شارك الموقع</h3>
+      <p>ساعدنا في نشر موقع المدرسة ومشاركته مع الطلاب وأولياء الأمور.</p>
+      <div class="share-actions">
+        <button class="share-btn facebook" onclick="shareSite('facebook')"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+        <button class="share-btn whatsapp" onclick="shareSite('whatsapp')"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+        <button class="share-btn telegram" onclick="shareSite('telegram')"><i class="fa-brands fa-telegram"></i> Telegram</button>
+        <button class="share-btn copy" onclick="shareSite('copy')"><i class="fa-solid fa-copy"></i> نسخ الرابط</button>
+      </div>
+    </div>
+    <div class="map-card">
+      <div class="map-head"><h3><i class="fa-solid fa-map-location-dot"></i> موقع المدرسة</h3><a id="schoolFacebook" href="https://facebook.com/" target="_blank" rel="noopener" class="school-facebook"><i class="fa-brands fa-facebook"></i> فيسبوك المدرسة</a></div>
+      <div class="map-frame"><iframe id="schoolMap" src="https://www.google.com/maps?q=العقال%20البحري%20أسيوط&output=embed" loading="lazy" title="خريطة موقع المدرسة"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="contact-panel">
+    <div><span class="eyebrow">تواصل معنا</span><h2 id="contactTitle">مدرسة العقال البحري الثانوية المشتركة</h2><p id="contactAddress">العقال البحري - محافظة أسيوط - جمهورية مصر العربية</p></div>
+    <div class="contact-meta"><span><i class="fa-solid fa-clock"></i> مواعيد الدراسة تبدأ من 7:00 صباحًا</span><span><i class="fa-solid fa-location-dot"></i> أسيوط، مصر</span></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-line"></div><p>تم تطوير هذا الموقع بواسطة</p>
+  <div class="karezmatik"><span>♛</span> 𝐊𝐀𝐑𝐄𝐙𝐌𝐀𝐓𝐈𝐊 <span>♛</span></div>
+  <div class="footer-contact">
+    <a class="footer-phone" href="https://wa.me/201140831263" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> للتواصل واتساب: +20 1043574998</a>
+    <a class="footer-phone telegram-link" href="https://t.me/+201140831263" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> للتواصل تليجرام: +20 1043574998</a>
+  </div>
+</footer>
+
+<div id="lightbox" class="modal-backdrop image-lightbox">
+  <button id="lightboxClose" aria-label="إغلاق">×</button>
+  <div class="lightbox-frame">
+    <img id="lightboxImage" alt="صورة من المدرسة">
+    <div id="lightboxCaption">صورة من مدرسة العقال البحري الثانوية المشتركة</div>
+  </div>
+</div>
+
+<div id="adminModal" class="modal-backdrop">
+  <div class="admin-shell">
+    <button class="modal-close" data-close-admin>×</button>
+    <div id="adminLogin">
+      <span class="eyebrow">وضع المشرف</span><h2>دخول لوحة التحكم</h2>
+      <p>بعد الدخول ستظهر أدوات التعديل والإضافة والحذف داخل كل قسم.</p>
+      <div class="admin-login-form"><input id="adminPassword" type="password" placeholder="كلمة المرور"><button id="loginBtn" class="cinematic-btn">تسجيل الدخول</button></div>
+
+    </div>
+    <div id="adminPanel" hidden>
+      <div class="admin-top"><div><span class="eyebrow">وضع المشرف مفعل</span><h2>لوحة التحكم</h2></div><button id="logoutBtn" class="ghost-btn">تسجيل الخروج</button></div>
+      <p class="admin-note">أثناء وضع المشرف ستظهر أدوات ✏️ تعديل و＋ إضافة و🗑️ حذف بجوار المحتوى. التعديلات تُحفظ على هذا الجهاز.</p>
+      <div class="admin-actions">
+        <button data-admin-action="hero">تعديل الرئيسية</button>
+        <button data-admin-action="manager">تعديل المديرة</button>
+        <button data-admin-action="phrase">تعديل العبارات</button>
+        <button data-admin-action="contact">تعديل العنوان</button>
+        <button class="admin-add-teacher" onclick="addItem('teacher')"><i class="fa-solid fa-user-plus"></i> إضافة كارت مدرس</button>
+        <button onclick="addItem('official')"><i class="fa-solid fa-user-plus"></i> إضافة قيادة</button>
+        <button onclick="addItem('gallery')"><i class="fa-solid fa-image"></i> إضافة صورة</button>
+        <button onclick="addItem('activity')"><i class="fa-solid fa-plus"></i> إضافة نشاط</button>
+        <button onclick="addItem('news')"><i class="fa-solid fa-newspaper"></i> إضافة خبر</button>
+        <button id="resetData">استعادة البيانات الأصلية</button>
+        <button id="changePassword">تغيير كلمة المرور</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="editorModal" class="modal-backdrop">
+  <div class="editor-shell"><button class="modal-close" data-close-editor>×</button><div id="editorContent"></div></div>
+</div>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
